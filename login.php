@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #000428, #004e92);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .login-card {
+            background-color: #1c1c1e;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .form-section {
+            padding: 2rem;
+        }
+
+        .form-control {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            box-shadow: none;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 15px rgba(128, 128, 255, 0.8);
+            outline: none;
+        }
+
+        .btn-login {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            border: none;
+            color: #fff;
+            padding: 0.75rem;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .btn-login:hover {
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+            transform: translateY(-2px);
+        }
+
+        .register-link {
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+            color: #a8a8a8;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .register-link:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .image-section img {
+            width: 100%;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="row login-card">
+                    <div class="col-md-6 image-section">
+                        <img src="blog-1.png" alt="Login Image">
+                    </div>
+                    <div class="col-md-6 form-section">
+                        <h3 class="text-center">Login</h3>
+                        <form action="login_action.php" method="post">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-login">Login</button>
+                            <a href="register.php" class="register-link">Register</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
